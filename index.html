@@ -34,7 +34,7 @@
         <link href="" rel="apple-touch-icon-precomposed">
         
         <link href="assets/css/reset.css" rel="stylesheet">      
-        <link href="assets/css/style.css" rel="stylesheet">      
+        <link href="assets/stylus/style.css" rel="stylesheet">      
         <link href="assets/css/bootstrap.css" rel="stylesheet">      
         <link href="assets/css/font-awesome.css" rel="stylesheet">      
         <link href="assets/fancybox/source/jquery.fancybox.css" rel="stylesheet">      
@@ -64,7 +64,17 @@
                  });
             });
         </script>    
-
+        <style>
+            /*
+                height: 100vh;
+            */
+            .fullheight{
+                background-position: center center;
+                height: 530px;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
     <body class="index">
     <script>
@@ -77,7 +87,7 @@
     </script>
 
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default hidden-xs" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -89,7 +99,8 @@
                 </button>
                 <a class="navbar-brand" href="/">
                     <figure>
-                        <img src="assets/images/brand-logo.png" alt="Grupo empresarial Blas Sibaja" width="130">
+                        <img src="assets/images/brand-logo.png" alt="Grupo empresarial Blas Sibaja" width="130" class="visible-lg visible-md hidden-sm hidden-xs">
+                        <img src="assets/images/brand-logo-mobile.png" alt="Grupo empresarial Blas Sibaja" width="130" class="hidden-lg hidden-md visible-sm visible-xs">
                     </figure>
                 </a>
             </div>
@@ -105,19 +116,21 @@
             </div><!-- /.navbar-collapse -->
         </div>
     </nav>
-
     <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 bg-img1">
+        <div class="">
+            <div class="visible-xs hidden-lg hidden-md hidde-sm text-center">
+                <img src="assets/images/brand-logo-mobile.png" alt="logo" width="120">
+            </div>
+          <!--  <div class="row">
+                <div class="col-lg-5 col-md-5 hidden-sm hidden-xs bg-img1">
                     <article class=" minh-35"></article>
                 </div>
-                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 bg-img2">
+                <div class="col-lg-7 col-md-7 hidden-sm hidden-xs bg-img2">
                     <article class=" minh-35"></article>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 bg-img3">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs bg-img3">
                     <article class=" minh-35"></article>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 bg-img4">
@@ -128,9 +141,33 @@
                         <h1>
                             Somos su mejor opción en cubiertas para techo, estructuras de hierro, aislantes y hojalateria en diferentes proyectos:
                         </h1>
-                        <a href="#!" class="btn btn-lg btn-primary bold text-uppercase">contáctenos</a>
+                        <a href="#!" class="btn btn-lg btn-primary bold text-uppercase hidden-xs">contáctenos</a>
                     </article>
                 </div>
+            </div> -->
+            <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+                    <li data-target="#carousel-id" data-slide-to="3" class=""></li>
+                </ol>
+                <div class="carousel-inner contenidoasd-full-height">
+                    <div class="item fullheight active" style="background-image: url(assets/images/slide/DSC_0800.jpg);">
+                       
+                    </div>
+                    <div class="item fullheight" style="background-image: url(assets/images/slide/DSC_0813.jpg)">
+                       
+                    </div>
+                    <div class="item fullheight" style="background-image: url(assets/images/slide/DSC_0778.jpg)">
+                      
+                    </div>
+                    <div class="item fullheight" style="background-image: url(assets/images/slide/DSC_0768.jpg)">
+                       
+                    </div>
+                </div>
+                <a class="left carousel-control hidden-xs" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control hidden-xs" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
     </header>
@@ -147,9 +184,12 @@
                         <div class="container contenido">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <p>Somos un conjunto de empresas fabricantes e instaladoras con más de 20 años de experiencia y prestigio en el mercado de <strong>Costa Rica</strong>, siempre en busca de excelencia en la elaboración de sus proyectos. Contando con el apoyo de los mejores proveedores para ofrecer la mayor calidad y variedad en sus servicios.</p>                                    
+                                    <h1>Nosotros</h1>
                                     <p>
-                                        Reconocidos nacionalmente, el <strong>Grupo empresarial Blas y Hnos</strong>, pretende producir y comercializar la más amplia gama de productos y soluciones en acero que permitan complacer a un gran cantidad de clientes brindando la mejor atención y gran cantidad de clientes siempre brindando la mejor atención y economia. En constante crecimiento, busca innovar sus servicios y satisfacer de manera comercial, en materias primas de excelente calidad con una impostación directa y producción propia de diferentes tipos de cubiertas para techos.
+                                        Somos un conjunto de empresas fabricantes e instaladoras con más de 20 años de experiencia y prestigio en el mercado de Costa Rica, siempre en busca de excelencia en la elaboración de sus proyectos. Contando con el apoyo de los mejores proveedores para ofrecer la mayor calidad y variedad en sus servicios.
+                                    </p>                                    
+                                    <p>
+                                        Reconocidos nacionalmente, el Grupo Empresarial Blas Sibaja y Hnos, pretende producir y comercializar la más amplia gama de productos y soluciones en acero que permitan complacer a una gran cantidad de clientes siempre brindando la mejor atención y economía. En constante crecimiento, busca innovar sus servicios y satisfacer de manera comercial, en materias primas de excelente calidad con una importación directa y producción propia de diferentes tipos de cubiertas para techos y Hojalatería.
                                     </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -185,13 +225,13 @@
                        <div class="container contenido">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <h1>TAB 2 PARA NUESTRO EQUIPO</h1>                                 
+                                    <h1>Nuestro equipo</h1>                                 
                                     <p>
-                                        Reconocidos nacionalmente, el <strong>Grupo empresarial Blas y Hnos</strong>, pretende producir y comercializar la más amplia gama de productos y soluciones en acero que permitan complacer a un gran cantidad de clientes brindando la mejor atención y gran cantidad de clientes siempre brindando la mejor atención y economia. En constante crecimiento, busca innovar sus servicios y satisfacer de manera comercial, en materias primas de excelente calidad con una impostación directa y producción propia de diferentes tipos de cubiertas para techos.
+                                        Somos una empresa confiable a nivel mundial, no sólo por los servicios que ofrecemos, sino por esas personas que hacen posible que usted se sienta atendido como se merece, y ese es nuestro personal, que constantemente está dedicado a satisfacer sus necesidades en todas las áreas que así requiera. Además, nuestra mano de obra es totalmente calificada, tanto en los procesos de producción de Hojalatería, como de cubiertas para techos.
                                     </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <figure class="bg-img1 minh-35">
+                                    <figure class="bg-img2 minh-35">
                                         
                                     </figure>
                                 </div>
@@ -200,19 +240,22 @@
                                 <div class="col-lg-12 col-xs-12">
                                     <ul class="tipos-techos">
                                         <li>
-                                            <h3><i class="fa fa-circle"></i> Recidencias</h3>
+                                            <h3><i class="fa fa-circle"></i> Ingenieros</h3>
                                         </li>
                                         <li>
-                                            <h3><i class="fa fa-circle"></i> Edificios de Oficinas</h3>
+                                            <h3><i class="fa fa-circle"></i> Supervisores de Campo</h3>
                                         </li>
                                         <li>
-                                            <h3><i class="fa fa-circle"></i> Centros Comerciales</h3>
+                                            <h3><i class="fa fa-circle"></i> Presupuestistas</h3>
                                         </li>
                                         <li>
-                                            <h3><i class="fa fa-circle"></i> Edificios Comerciales</h3>
+                                            <h3><i class="fa fa-circle"></i> Supervisores de producción</h3>
                                         </li>
                                         <li>
-                                            <h3><i class="fa fa-circle"></i> Bodegas</h3>
+                                            <h3><i class="fa fa-circle"></i> Personal Administrativo</h3>
+                                        </li>
+                                        <li>
+                                            <h3><i class="fa fa-circle"></i> Personal de ventas</h3>
                                         </li>
                                     </ul>
                                 </div>
@@ -223,13 +266,16 @@
                         <div class="container contenido">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <h1>TAB 3 PARA EMPRESAS ASOCIADAS</h1>                                
+                                    <h1>Nuestros servicios</h1>                                
                                     <p>
-                                        Reconocidos nacionalmente, el <strong>Grupo empresarial Blas y Hnos</strong>, pretende producir y comercializar la más amplia gama de productos y soluciones en acero que permitan complacer a un gran cantidad de clientes brindando la mejor atención y gran cantidad de clientes siempre brindando la mejor atención y economia. En constante crecimiento, busca innovar sus servicios y satisfacer de manera comercial, en materias primas de excelente calidad con una impostación directa y producción propia de diferentes tipos de cubiertas para techos.
+                                        Nuestra empresa cuenta con el mejor equipo en atención, personal capacitado y módicos precios para una mejor integración en el ambiente comercial rentable, la aceptación obtenida nos hace capaces de satisfacer y suplir las necesidades de los clientes, que requieren de servicios en cuanto a hojalateria y cubiertas para techo.
+                                    </p>
+                                    <p>
+                                        Presupuestación y asesoramiento técnico en cubiertas para techo, estructuras de hierro, aislantes y hojalateria en diferentes proyectos:
                                     </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <figure class="bg-img1 minh-35">
+                                    <figure class="bg-img3 minh-35" style="background-image: url(assets/images/nuestros-servicios.png);">
                                         
                                     </figure>
                                 </div>
@@ -238,7 +284,7 @@
                                 <div class="col-lg-12 col-xs-12">
                                     <ul class="tipos-techos">
                                         <li>
-                                            <h3><i class="fa fa-circle"></i> Recidencias</h3>
+                                            <h3><i class="fa fa-circle"></i> Residencias</h3>
                                         </li>
                                         <li>
                                             <h3><i class="fa fa-circle"></i> Edificios de Oficinas</h3>
@@ -293,89 +339,171 @@
             <div class="container-fluid">
                 <div class="row" style="margin-top: 2em">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/1.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/limahoya-des.jpg" >
                             <figure>
-                                <img src="assets/images/pro1.png" alt="" class="img-responsive" />
+                                <img src="assets/images/productos/limahoya.png" alt="" class="img-responsive"/>
                                 <figcaption>
-                                     <h4>Bajantes</h4>
+                                     <h4 class="text-uppercase">LIMAHOYAS</h4>
                                 </figcaption>
                             </figure>
                            
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/2.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/bajantes-des.jpg">
                             <figure>
-                                <img src="assets/images/pro2.png" alt="" class="img-responsive" />
+                                <img src="assets/images/productos/bajante.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Limahoyas</h4>
+                                     <h4>bajante</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/3.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/botagua-des.jpg">
                             <figure>
-                                <img src="assets/images/pro3.png" alt="" class="img-responsive" />
+                                <img src="assets/images/productos/botaagua.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Cumbrera</h4>
+                                     <h4>Botaguas</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/4.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/cumbreras-des.jpg">
                             <figure>
-                                <img src="assets/images/pro4.png" alt="" class="img-responsive" />
+                                <img src="assets/images/productos/cumbreras.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Bajantes</h4>
+                                     <h4>cumbreras</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 2em">
+                <div class="row " style="margin-top: 2em">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/1.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/canoa-des.jpg" title="Title">
                             <figure>
                                 <img src="assets/images/pro1.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Bajantes</h4>
+                                     <h4>Canoas</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/2.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/canoa-des.jpg" title="Title">
                             <figure>
-                                <img src="assets/images/pro2.png" alt="" class="img-responsive" />
+                                <img src="assets/images/pro6.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Bajantes</h4>
+                                     <h4>Ductos</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/3.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/canoa-des.jpg" title="Title">
                             <figure>
-                                <img src="assets/images/pro3.png" alt="" class="img-responsive" />
+                                <img src="assets/images/pro5.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Bajantes</h4>
+                                     <h4>Cubiertas para techos</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <a class="fancybox" rel="gallery1" href="assets/images/example/4.jpg" title="Titulo">
+                        <a class="fancybox" rel="gallery1" href="assets/images/productos/canoa-des.jpg" title="Title">
                             <figure>
                                 <img src="assets/images/pro4.png" alt="" class="img-responsive" />
                                 <figcaption>
-                                     <h4>Bajantes</h4>
+                                     <h4>Aislantes</h4>
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
+                    
                 </div>            
+            </div>
+    </section>    
+
+    <section class="proyectos">
+        <h1 class="text-center text-uppercase">Algunos de nuestros proyectos</h1>
+            <div class="container-fluid">
+                <div class="row" style="margin-top: 2em">
+                    <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 no-padding-left-right" >
+                        <a class="fancybox" rel="gallery1" href="assets/images/example/1.jpg" title="Title">
+                            <figure style="background-image: url(assets/images/portafolio/c1.png);">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                    <p class="semi-bold">Lorem ipsum dolor sit amet</p>
+                                    <p>2017</p>
+                                </figcaption>
+                            </figure>
+                           
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-padding-left-right" >
+                        <a class="fancybox" rel="gallery1" href="assets/images/portafolio/c2.png" title="Title">
+                            <figure style="background-image: url(assets/images/portafolio/c2.png);">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                    <p class="semi-bold">Lorem ipsum dolor sit amet</p>
+                                    <p>2017</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-lg-5 col-md-3 col-sm-6 col-xs-12 no-padding-left-right" >
+                        <a class="fancybox" rel="gallery1" href="assets/images/portafolio/c3.png" title="Title">
+                            <figure style="background-image: url(assets/images/portafolio/c3.png);">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                    <p class="semi-bold">Lorem ipsum dolor sit amet</p>
+                                    <p>2017</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-3 col-sm-6 col-xs-12 no-padding-left-right">
+                        <a class="fancybox" rel="gallery1" href="assets/images/portafolio/c4.png" title="Title">
+                            <figure style="background-image: url(assets/images/portafolio/c4.png);">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                    <p class="semi-bold">Lorem ipsum dolor sit amet</p>
+                                    <p>2017</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 no-padding-left-right">
+                        <a class="fancybox" rel="gallery1" href="assets/images/example/1.jpg" title="Title">
+                            <figure style="background-image: url(assets/images/portafolio/c5.png);">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                    <p class="semi-bold">Lorem ipsum dolor sit amet</p>
+                                    <p>2017</p>
+                                </figcaption>
+                            </figure>
+                           
+                        </a>
+
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 no-padding-left-right">
+                        <a class="fancybox" rel="gallery1" href="assets/images/portafolio/c2.png" title="Title">
+                            <figure style="background-image: url(assets/images/portafolio/c6.png);">
+                                <figcaption>
+                                    <h3>Title</h3>
+                                    <p class="semi-bold">Lorem ipsum dolor sit amet</p>
+                                    <p>2017</p>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                   
+                </div>
+                          
             </div>
     </section>
 

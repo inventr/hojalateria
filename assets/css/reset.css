@@ -33,6 +33,13 @@
     display: table-cell;
     width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+    .full-width-tabs > ul.nav.nav-tabs > li {
+        display: table-caption;
+    }
+}
+
 .full-width-tabs > ul.nav.nav-tabs > li > a {
     text-align: center;
 }
@@ -62,10 +69,15 @@
     margin-right: 0px !important;
     border-radius: 0px 0px 0 0 !important;
     text-transform: uppercase;
-    font-weight: 600;
     color: #292929 !important;
     font-size: 24px;
-    font-weight: 400 !important;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-tabs > li > a {
+        font-size: 14px;
+    }
 }
 
 .nav > li > a {
