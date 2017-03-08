@@ -380,4 +380,8 @@ body {
 }
 #nosotros h1{
   font-size: 2em;
+  
+}
+#nosotros p{
+  text-align: justify;
 }
